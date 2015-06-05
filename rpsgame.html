@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rock Paper Scissors</title>
+		<!-- Made by Ethan Arrowood -->
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+	<h1>Rock Paper Scissors</h1>
+	<h3>Made by Ethan Arrowood</h3>
+	
+		<!-- The game :D -->
+		<button onclick="myFunction()">Click me to play!</button>
+		<pre>
+		<script> 
+function myFunction () {
+$('p').empty();
+var choice = prompt("Rock, Paper, or Scissors?")
+var user = choice.toUpperCase()
+var compchoice = Math.random()
+console.log(compchoice)
+	if (0.00 <= compchoice && compchoice <= 1/3.0) {
+		compchoice = "Rock";
+	} else if (0.34 <= compchoice && compchoice <= 2/3.0) {
+		compchoice = "Paper";
+	} else {
+		compchoice = "Scissors";
+	};
+var comp = compchoice.toUpperCase()
+var compare = function (c1, c2){
+	if (c1 === c2) {
+	return "It's a draw!";
+	} else if (c1 === "ROCK") {
+		if (c2 === "SCISSORS") {
+		return "You win :)";
+		} else {
+		return "You lose :(";
+		}
+	} else if (c1 === "PAPER") {
+		if (c2 === "ROCK") {
+		return "You win :)";
+		} else {
+		return "You lose :(";
+		}
+	} else if (c1 === "SCISSORS") {
+		if (c2 === "PAPER") {
+		return "You win :)";
+		} else {
+		return "You lose :(";
+		}
+	} else if (c1 !== "ROCK", "PAPER", "SCISSORS") {
+		return "Game over! You did not put in a valid choice!";
+		}
+};
+console.log(compare(user,comp))
+console.log(compchoice)
+
+$('#a').append('You chose ' + choice + '.')
+$('#b').append('Computer chose ' + compchoice + '.')
+$('#c').append(compare(user, comp));
+}
+
+		</script>
+		</pre>
+		<div style="height:100px; width:350px; background-color:#99ccff">
+			<p id="a" style="margin-left: 5px; margin-top: 5px"></p>
+			<p id="b" style="margin-left: 5px"></p>
+			<p id="c" style="margin-left: 5px"></p>
+		</div>
+	</body>
+</html>
